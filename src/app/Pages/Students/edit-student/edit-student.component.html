@@ -1,0 +1,47 @@
+
+
+<div class="row container d-flex justify-content-center square-box align-items-center">
+    <div class="row col-sm-12 col-md-12 col-xl-6 col-lg-6 justify-content-center align-items-center ">
+      
+        <div class="card  bg-light  ">
+          <div class="card-body">
+
+            <h2 class="card-title ">Edit Student</h2>
+            <form [formGroup]="EditStudentForm" (ngSubmit)="onSubmit()">
+              <div class="form-group ">
+                <label for="Name">Name *</label>
+                <input type="text" class="form-control" id="Name" name="Name" formControlName="name">
+                <span class="text-danger" *ngIf="EditStudentForm.controls['name'].errors && EditStudentForm.controls['name'].touched">
+                    Invalid
+                  </span>
+              </div>
+              <div class="form-group">
+                <label for="NationalId">NationalId *</label>
+                <input type="text" class="form-control" id="NationalId" name="NationalId" formControlName="NationalId"  >
+                <span class="text-danger" *ngIf="EditStudentForm.controls['NationalId'].errors && EditStudentForm.controls['NationalId'].touched">
+                    Invalid
+                  </span>
+              </div>
+              <div class="form-group">
+                <label for="Academic-year">Academic year *</label>
+               <br>
+                    <select id="Academic-year"  (change)="changeValue($event)" name="Academic-year"class="custom-select custom-select-lg mb-3 form-control" formControlName=" AcademicYear">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Primary One</option>
+                        <option value="2">Primary Two</option>
+                        <option value="3">Primary Three</option>
+                      </select>
+
+                      <span class="text-danger" *ngIf="EditStudentForm.controls['AcademicYear'].errors && EditStudentForm.controls['AcademicYear'].touched">
+                       Invalid
+                      </span>
+              </div>
+              <button type="submit" class="btn btn-primary m-1" [disabled]="!EditStudentForm.valid">Save Now</button>
+              <button  class="btn btn-secondary m-1" (click)="goBack()">Go Back</button>
+            </form>
+ 
+
+  </div>
+        </div>
+    </div>
+</div>

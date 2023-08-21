@@ -1,0 +1,52 @@
+<div class="row container d-flex justify-content-center square-box align-items-center">
+    <div class="row col-sm-12 col-md-12 col-xl-6 col-lg-6 justify-content-center align-items-center ">
+      
+        <div class="card  bg-light  ">
+          <div class="card-body">
+
+
+            <h2 class="card-title ">Add Subject Marks</h2>
+
+            <form [formGroup]="AddStudentForm" (ngSubmit)="onSubmit()">
+
+               
+                    <label for="floatingInputDisabled">Name</label>
+                 
+                  <div class="form-floating ">
+                    <input type="email" class="form-control" id="floatingInputDisabled"  disabled>
+                    <label class="h1" for="floatingInputDisabled">{{AddStudentForm.controls['name'].value}}</label>
+                  </div>
+                  <label  for="floatingInputDisabled">Academic year</label>
+                 
+                  <div class="form-floating ">
+                    <input type="email" class="form-control" id="floatingInputDisabled"  disabled>
+                    <label class="h1" for="floatingInputDisabled">{{AddStudentForm.controls["AcademicYear"].value}}</label>
+                  </div>
+
+              <div class="form-group ">
+                <label for="Term1">Term1</label>
+                <input type="text" class="form-control" id="Term1" name="Term1" formControlName="Term1">
+                <span class="text-danger" *ngIf="AddStudentForm.controls['Term1'].errors && AddStudentForm.controls['Term1'].touched">
+                    Invalid , please Write Number Below 30
+                  </span>
+              </div>
+
+
+              <div class="form-group">
+                <label for="Term2">Term2</label>
+                <input type="text" class="form-control" id="Term2" name="Term2" formControlName="Term2">
+                <span class="text-danger" *ngIf="AddStudentForm.controls['Term2'].errors && AddStudentForm.controls['Term2'].touched">
+                    Invalid , please Write Number Below 30
+                  </span>
+              </div>
+
+              <button type="submit" class="btn btn-primary m-3" [disabled]="!AddStudentForm.valid">Save Now</button>
+            
+
+            </form>
+            <button  class="btn btn-secondary m-3" (click)="goBack()">Go Back</button>
+
+  </div>
+  </div>
+  </div>
+</div>

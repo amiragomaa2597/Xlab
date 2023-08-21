@@ -1,0 +1,46 @@
+<div class="row container d-flex justify-content-center square-box align-items-center">
+  <div class="row col-sm-12 col-md-12 col-xl-8 col-lg-8 justify-content-center align-items-center ">
+    
+      <div class="card  bg-light  ">
+        <div class="card-body">
+<div class="container">
+    <!-- <h2>{{ students.name }}'s Grades</h2> -->
+ <table class="table ">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th > Marks</th>
+          <th >Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+          <td>Arabic</td>
+          <td> {{student.term1Arabic!+student.term2Arabic!}}</td>
+          <td>{{calculateGrade(60,student.term1Arabic!+student.term2Arabic!)}}</td>
+        </tr>
+        <tr>
+         
+          <td>Science</td>
+          <td> {{student.term1Science!+student.term2Science!}}</td>
+          <td>{{calculateGrade(60,student.term1Science!+student.term2Science!)}}</td>
+        </tr>
+        <tr>
+        
+          <td>Total</td>
+          <td>{{student.term1Science!+student.term2Science!+student.term1Arabic!+student.term2Arabic!}}</td>
+          <td>{{calculateGrade(60,student.term1Science!+student.term2Science!+student.term1Arabic!+student.term2Arabic!)}}</td>
+        </tr>
+      </tbody>
+    </table> 
+   
+    <button class="btn btn-secondary m-1 " (click)="goBack()">Go Back</button>
+  </div>
+
+</div>
+      </div>
+  </div>
+</div>
+
+  

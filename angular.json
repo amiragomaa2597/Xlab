@@ -87,12 +87,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "D:/Frontend/angular-tour-of-heroes/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "D:/Frontend/angular-tour-of-heroes/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7a517ab9-fbeb-4ce7-a90d-4b755edea4c8"
   }
 }
